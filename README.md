@@ -31,9 +31,9 @@ plt.title('Balanced K-Means Clustering')
 plt.show()
 ```
 
-## Example: WHOMP Random
+### Example: WHOMP Random
 
-### WHOMP also provides functionality to generate evenly dispersed subgroups with ''anti-clustering'' techniques.
+WHOMP also provides functionality to generate evenly dispersed subgroups with ''anti-clustering'' techniques.
 
 ```python
 from WHOMP import WHOMP_Random
@@ -52,9 +52,9 @@ plt.title('WHOMP Random Anti-Clustering Result')
 plt.show()
 ```
 
-## Example: WHOMP Matching on a Toy Dataset
+### Example: WHOMP Matching on a Toy Dataset
 
-### This example shows how to use WHOMP to perform barycenter matching, where the subgroups are matched to minimize the Wasserstein distance between them and the original dataset at the lowest scale or variance differences among the subgroups.
+This example shows how to use WHOMP to perform barycenter matching, where the subgroups are matched to minimize the Wasserstein distance between them and the original dataset at the lowest scale or variance differences among the subgroups.
 
 ```python
 from WHOMP import WHOMP_Matching
@@ -70,11 +70,11 @@ plt.title('WHOMP Matching Result')
 plt.show()
 ```
 
-# Test Cases
+## Test Cases
 
 WHOMP has several built-in test cases that evaluate the performance of its partitioning methods in various scenarios:
 
-## 1. Wasserstein Experiment on Gaussian Dataset
+### 1. Wasserstein Experiment on Gaussian Dataset
 
 This test demonstrates how to calculate Wasserstein-2 distances between subsampled groups and the original dataset using Gaussian blobs.
 
@@ -96,7 +96,7 @@ print("Anticluster:", anticluster_error_std)
 print("WHOMP Barycenter Matching:", WHOMP_error_std)
 ```
 
-## 2. Wasserstein Experiment on NPI Dataset
+### 2. Wasserstein Experiment on NPI Dataset
 
 This test case demonstrates how to apply WHOMP and Wasserstein distance calculations on an NPI dataset.
 
@@ -131,7 +131,7 @@ for i in range(3):
     print(f"Mean Variances (bary_mean_list[{i}]):", np.var(np.array(bary_mean_list[i])), np.var(np.array(anti_mean_list[i])), np.var(np.array(PS_mean_list[i])), np.var(np.array(random_mean_list[i])))
 ```
 
-## 3. SBM Spectrum Experiment
+### 3. Stochastic Block Model Spectrum Experiment
 
 This experiment compares different subgroups by computing the Wasserstein distance between Laplacian spectra in a Stochastic Block Model (SBM). Different partitioning methods are used to generate subgroups.
 
@@ -149,7 +149,7 @@ print("Averages: ", Ave_list)
 print("Standard Deviations: ", Std_list)
 ```
 
-## 5. Entropy on MNIST
+### 4. Entropy on MNIST
 
 This test evaluates the entropy of subgroups generated from MNIST t-SNE embeddings. The goal is to measure how well different partitioning methods preserve the original label distribution in each subgroup.
 

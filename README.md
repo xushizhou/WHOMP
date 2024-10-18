@@ -2,9 +2,7 @@
 
 ## Overview
 
-WHOMP (Wasserstein Hierarchical Optimal Matching for Partitions) is an open-source Python library designed to partition data into balanced subgroups while preserving statistical properties of the original dataset. It handles tasks such as covariate-adaptive randomization, anti-clustering, and barycenter matching through constrained K-Means and optimal transport techniques.
-
-WHOMP is designed for applications in experimental design, balanced clustering, and machine learning, where maintaining balanced subgroups with respect to covariates is critical.
+WHOMP (Wasserstein HOMogeneity Partitions) is an open-source Python package designed to partition datasets into subgroups that maximize diversity within each subgroup while minimizing dissimilarity across subgroups. It optimally minimizes type I and type II errors that often result from imbalanced group splitting or partitioning, commonly referred to as accidental bias, in comparative and controlled trials.
 
 ## Usage
 
@@ -195,9 +193,11 @@ Start using WHOMP to create balanced subgroups and explore the power of optimal 
 
 If you use WHOMP in your research, please cite the following paper:
 
+```latex
 @article{xu2024whomp,
   title={WHOMP: Optimizing Randomized Controlled Trials via Wasserstein Homogeneity},
   author={Xu, Shizhou and Strohmer, Thomas},
   journal={arXiv preprint arXiv:2409.18504},
   year={2024}
 }
+```

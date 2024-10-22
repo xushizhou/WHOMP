@@ -35,10 +35,6 @@ WHOMP also provides functionality to generate evenly dispersed subgroups with ''
 
 ```python
 from WHOMP import WHOMP_Random
-import matplotlib.pyplot as plt
-
-# Generate toy data
-X_toy, _ = make_blobs(n_samples=60, centers=[(0,10), (-10,-5), (10,-5)], cluster_std=[3, 3, 3])
 
 # Apply WHOMP Random Anti-Clustering
 anti_index = WHOMP_Random(X_toy, 2)
@@ -56,7 +52,6 @@ This example shows how to use WHOMP to perform barycenter matching, where the su
 
 ```python
 from WHOMP import WHOMP_Matching
-import matplotlib.pyplot as plt
 
 # Apply WHOMP Matching
 barycenter, barysample_index = WHOMP_Matching(X_toy, 2, 0.0000001)

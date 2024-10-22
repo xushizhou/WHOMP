@@ -48,7 +48,10 @@ plt.title('WHOMP Random Anti-Clustering Result')
 plt.show()
 ```
 
-### Example: WHOMP Matching on a Toy Dataset
+![alt text]([https://github.com/xushizhou/WHOMP/blob/main/images/Constrained_Kmeans.png](https://github.com/xushizhou/WHOMP/blob/main/images/WHOMP_random.png))
+
+
+### Example: WHOMP Matching
 
 This example shows how to use WHOMP to perform barycenter matching, where the subgroups are matched to minimize the Wasserstein distance between them and the original dataset at the lowest scale or variance differences among the subgroups.
 
@@ -64,6 +67,9 @@ for i in range(2):
 plt.title('WHOMP Matching Result')
 plt.show()
 ```
+
+![alt text]([https://github.com/xushizhou/WHOMP/blob/main/images/Constrained_Kmeans.png](https://github.com/xushizhou/WHOMP/blob/main/images/WHOMP_Matching.png))
+
 
 ## Test Cases
 

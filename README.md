@@ -48,7 +48,7 @@ plt.title('WHOMP Random Anti-Clustering Result')
 plt.show()
 ```
 
-![alt text](https://github.com/xushizhou/WHOMP/blob/main/images/WHOMP_random.png)
+![alt text](https://github.com/xushizhou/WHOMP/blob/main/images/WHOMP_Random.png)
 
 
 ### Example: WHOMP Matching

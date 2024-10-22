@@ -44,7 +44,7 @@ anti_index = WHOMP_Random(X_toy, 2)
 # Plot WHOMP Random Anti-Clustering result
 for i in range(3):
     plt.scatter(X_toy[np.where(anti_index == i)[0], 0], X_toy[np.where(anti_index == i)[0], 1])
-plt.title('WHOMP Random Anti-Clustering Result')
+plt.title('WHOMP Random Result')
 plt.show()
 ```
 

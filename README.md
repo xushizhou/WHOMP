@@ -48,7 +48,7 @@ plt.title('WHOMP Random Anti-Clustering Result')
 plt.show()
 ```
 
-![alt text]([https://github.com/xushizhou/WHOMP/blob/main/images/Constrained_Kmeans.png](https://github.com/xushizhou/WHOMP/blob/main/images/WHOMP_random.png))
+![alt text](https://github.com/xushizhou/WHOMP/blob/main/images/WHOMP_random.png)
 
 
 ### Example: WHOMP Matching
@@ -68,7 +68,7 @@ plt.title('WHOMP Matching Result')
 plt.show()
 ```
 
-![alt text]([https://github.com/xushizhou/WHOMP/blob/main/images/Constrained_Kmeans.png](https://github.com/xushizhou/WHOMP/blob/main/images/WHOMP_Matching.png))
+![alt text](https://github.com/xushizhou/WHOMP/blob/main/images/WHOMP_Matching.png)
 
 
 ## Test Cases

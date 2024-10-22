@@ -80,7 +80,7 @@ WHOMP has several built-in test cases that evaluate the performance of its parti
 This test demonstrates how to calculate Wasserstein-2 distances between subsampled groups and the original dataset using Gaussian blobs.
 
 ```python
-from WHOMP_Test Wasserstein_Gaussian_experiment
+from WHOMP_Test import Wasserstein_Gaussian_experiment
 
 random_error_ave, PS_error_ave, anticluster_error_ave, WHOMP_error_ave, random_error_std, PS_error_std, anticluster_error_std, WHOMP_error_std = Wasserstein_Gaussian_experiment()
 

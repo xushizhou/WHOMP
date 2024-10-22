@@ -29,6 +29,8 @@ plt.title('Balanced K-Means Clustering')
 plt.show()
 ```
 
+![alt text](https://github.com/xushizhou/WHOMP/blob/main/images/Constrained_Kmeans.png)
+
 ### Example: WHOMP Random
 
 WHOMP also provides functionality to generate evenly dispersed subgroups with ''anti-clustering'' techniques.

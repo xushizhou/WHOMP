@@ -5,38 +5,13 @@
 WHOMP (Wasserstein HOMogeneity Partition) is an open-source Python package designed to partition datasets into subgroups that maximize diversity within each subgroup while minimizing dissimilarity across subgroups. It optimally minimizes type I and type II errors that often result from imbalanced group splitting or partitioning, commonly referred to as accidental bias, in comparative and controlled trials.
 
 <p align="center">
-  <img src="https://github.com/xushizhou/WHOMP/blob/main/images/WHOMP_Random_1.png" alt="Image 1" width="400"/>
-  <img src="https://github.com/xushizhou/WHOMP/blob/main/images/WHOMP_Matching_1.png" alt="Image 2" width="400"/>
-  <img src="https://github.com/xushizhou/WHOMP/blob/main/images/PS_1.png" alt="Image 3" width="400"/>
-  <img src="https://github.com/xushizhou/WHOMP/blob/main/images/Random_1.png" alt="Image 4" width="400"/>
+  <img src="https://github.com/xushizhou/WHOMP/blob/main/images/WHOMP_Random_1.png" alt="Image 1" width="3500"/>
+  <img src="https://github.com/xushizhou/WHOMP/blob/main/images/WHOMP_Matching_1.png" alt="Image 2" width="350"/>
+  <img src="https://github.com/xushizhou/WHOMP/blob/main/images/PS_1.png" alt="Image 3" width="350"/>
+  <img src="https://github.com/xushizhou/WHOMP/blob/main/images/Random_1.png" alt="Image 4" width="350"/>
 </p>
 
 ## Usage
-
-### Example: Balanced K-Means Clustering
-
-This example demonstrates how to use WHOMP to perform balanced K-Means clustering, where the clusters have constraints on their sizes.
-
-```python
-from WHOMP import KMeansConstrained
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.datasets import make_blobs
-
-# Generate toy data
-X_toy, truth_model = make_blobs(n_samples=60, centers=[(0,10), (-10,-5), (10,-5)], cluster_std=[3, 3, 3])
-
-# Apply KMeans with balanced clusters
-clf = KMeansConstrained(n_clusters=3, size_min=20, size_max=20, random_state=0)
-clf.fit_predict(X_toy)
-
-# Plot the results
-plt.scatter(X_toy[:, 0], X_toy[:, 1], c=clf.labels_, cmap='viridis', marker='o')
-plt.title('Balanced K-Means Clustering')
-plt.show()
-```
-
-![alt text](https://github.com/xushizhou/WHOMP/blob/main/images/Constrained_Kmeans.png)
 
 ### Example: WHOMP Random
 

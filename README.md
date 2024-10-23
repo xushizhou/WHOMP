@@ -97,6 +97,11 @@ print("Anticluster:", anticluster_error_std)
 print("WHOMP Barycenter Matching:", WHOMP_error_std)
 ```
 
+![alt text](https://github.com/xushizhou/WHOMP/blob/main/images/WHOMP_Gaussian_2.png)
+![alt text](https://github.com/xushizhou/WHOMP/blob/main/images/WHOMP_Gaussian_4.png)
+![alt text](https://github.com/xushizhou/WHOMP/blob/main/images/WHOMP_Gaussian_6.png)
+
+
 ### 2. Wasserstein Experiment on NPI Dataset
 
 This test case demonstrates how to apply WHOMP and Wasserstein distance calculations on an NPI dataset.

@@ -118,7 +118,9 @@ X = X[~np.any(X == 0, axis=1)]
 
 # Run the partition experiment
 random_error_ave, PS_error_ave, anticluster_error_ave, WHOMP_error_ave, \
-random_error_std, PS_error_std, anticluster_error_std, WHOMP_error_std = NPI_experiment(X, range(2, 7, 2), 500)
+random_error_std, PS_error_std, anticluster_error_std, WHOMP_error_std, \
+random_var_list, PS_var_list, anti_var_list, bary_var_list, \
+random_mean_list, PS_mean_list, anti_mean_list, bary_mean_list = NPI_experiment(X, range(2, 7, 2), 500)
 
 # Print average and standard deviations of errors
 print("Average Errors:", random_error_ave, PS_error_ave, anticluster_error_ave, WHOMP_error_ave)
@@ -126,10 +128,12 @@ print("Standard Deviations:", random_error_std, PS_error_std, anticluster_error_
 
 # Print variance of partition results
 for i in range(3):
-    print(f"Variances (bary_var_list[{i}]):", np.var(np.array(bary_var_list[i])), np.var(np.array(anti_var_list[i])), np.var(np.array(PS_var_list[i])), np.var(np.array(random_var_list[i])))
+    print(f"Variances (bary_var_list[{i}]):", np.var(np.array(bary_var_list[i])),
+            np.var(np.array(anti_var_list[i])), np.var(np.array(PS_var_list[i])), np.var(np.array(random_var_list[i])))
 
 for i in range(3):
-    print(f"Mean Variances (bary_mean_list[{i}]):", np.var(np.array(bary_mean_list[i])), np.var(np.array(anti_mean_list[i])), np.var(np.array(PS_mean_list[i])), np.var(np.array(random_mean_list[i])))
+    print(f"Mean Variances (bary_mean_list[{i}]):", np.var(np.array(bary_mean_list[i])),
+            np.var(np.array(anti_mean_list[i])), np.var(np.array(PS_mean_list[i])), np.var(np.array(random_mean_list[i])))
 ```
 
 ### 3. Stochastic Block Model Spectrum Experiment

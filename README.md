@@ -201,7 +201,7 @@ WHOMP is licensed under the MIT License. See the LICENSE file for more details.
 
 ## Contributing
 
-We welcome contributions! Please read our CONTRIBUTING.md for details on how to submit pull requests, report issues, and suggest features.
+We welcome contributions! Please contact me via my email if you would like to report issues or suggest features.
 
 ## Acknowledgements
 

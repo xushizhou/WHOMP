@@ -155,17 +155,33 @@ print("Standard Deviations: ", Std_list)
 This test evaluates the entropy of subgroups generated from MNIST t-SNE embeddings. The goal is to measure how well different partitioning methods preserve the original label distribution in each subgroup.
 
 ```python
-from WHOMP import entropy_MNIST_experiment
+from sklearn import datasets
+from sklearn.manifold import TSNE
+from sklearn.preprocessing import StandardScaler
+from WHOMP_Test import run_WHOMP_MNIST_experiment
 
-repetition = 50
-subgroup_number = 2
-random_ent, PS_ent, anticluster_ent, WHOMP_ent = entropy_MNIST_experiment(tsne, subgroup_number, repetition)
+# data from sklearn datasets
+data = datasets.fetch_openml('mnist_784', version=1, return_X_y=True)
 
-# Print results
-print("Random Entropy: ", np.mean(random_ent))
-print("Pocock & Simon Entropy: ", np.mean(PS_ent))
-print("WHOMP Random Entropy: ", np.mean(anticluster_ent))
-print("WHOMP Matching Entropy: ", np.mean(WHOMP_ent))
+# Extract data & target from the dataset
+pixel_data, targets = data
+targets = targets.astype(int)
+x = pixel_data.values
+y = targets.values
+
+## Standardizing the data
+standardized_data = StandardScaler().fit_transform(x)
+print(standardized_data.shape)
+
+# t-SNE is consumes a lot of memory so we shall use only a subset of our dataset. 
+x_subset = x[0:120]
+y_subset = y[0:120]
+label = y_subset
+
+tsne = TSNE(random_state = 42, n_components=2,verbose=0, perplexity=10, n_iter=5000).fit_transform(x_subset)
+
+# Run the entropy experiment
+ent_average_list, ent_std_list = run_WHOMP_MNIST_experiment(tsne, y_subset, repetition = 50)
 ```
 
 ## Dependencies

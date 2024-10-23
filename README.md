@@ -5,10 +5,10 @@
 WHOMP (Wasserstein HOMogeneity Partition) is an open-source Python package designed to partition datasets into subgroups that maximize diversity within each subgroup while minimizing dissimilarity across subgroups. It optimally minimizes type I and type II errors that often result from imbalanced group splitting or partitioning, commonly referred to as accidental bias, in comparative and controlled trials.
 
 <p align="center">
-  <img src="https://github.com/xushizhou/WHOMP/blob/main/images/WHOMP_Random_1.png" alt="Image 1" width="300"/>
-  <img src="https://github.com/xushizhou/WHOMP/blob/main/images/WHOMP_Matching_1.png" alt="Image 2" width="300"/>
-  <img src="https://github.com/xushizhou/WHOMP/blob/main/images/PS_1.png" alt="Image 3" width="300"/>
-  <img src="https://github.com/xushizhou/WHOMP/blob/main/images/Random_1.png" alt="Image 4" width="300"/>
+  <img src="https://github.com/xushizhou/WHOMP/blob/main/images/WHOMP_Random_1.png" alt="Image 1" width="400"/>
+  <img src="https://github.com/xushizhou/WHOMP/blob/main/images/WHOMP_Matching_1.png" alt="Image 2" width="400"/>
+  <img src="https://github.com/xushizhou/WHOMP/blob/main/images/PS_1.png" alt="Image 3" width="400"/>
+  <img src="https://github.com/xushizhou/WHOMP/blob/main/images/Random_1.png" alt="Image 4" width="400"/>
 </p>
 
 ## Usage

@@ -433,14 +433,14 @@ def SBM_spectrum_experiment(subgroup_number, repetition):
     WHOMP_matching_error_std = []
     
     for s in range(repetition):
-        sizes = [10, 20, 30]
-        probs = [[0.6, 0.2, 0.2], [0.2, 0.6, 0.2], [0.2, 0.2, 0.6]]
+        sizes = [20, 20, 20]
+        probs = [[0.8, 0.4, 0.2], [0.4, 0.8, 0.4], [0.2, 0.4, 0.8]]
         G = nx.stochastic_block_model(sizes, probs, seed=0)
 
         spec_0 = nx.laplacian_spectrum(G)
         density_0 = np.ones(len(spec_0)) / len(spec_0)
         adj_matrix = nx.to_numpy_array(G)
-        G_embedded = spectral_embedding(adj_matrix, n_components=2, random_state=42, norm_laplacian=True)
+        G_embedded = spectral_embedding(adj_matrix, n_components=5, random_state=42, norm_laplacian=True)
         shuffle_index = np.arange(subgroup_number)
 
         # WHOMP Matching Partition
